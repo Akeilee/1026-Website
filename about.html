@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>About</title> <!-- webpage on the history -->
+	<link rel="stylesheet" type="text/css" href="cssOther.css" />
+	<script type="text/javascript" src="jscript.js"></script>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body><div>
+
+	<h1><a href="index.html">Home</a> &#62; About</h1> <!-- tells you which page you are on -->
+
+	<div id = "menu"> <!-- same menu as home page -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="about.html">About</a></li> <!-- active page on about -->
+				<li><a href="lessons.html">Lessons</a>
+					<ul style="list-style-type:circle">
+						<li><a href="HTML.html">HTML</a></li>
+						<li><a href="CSS.html">CSS</a></li>
+					</ul>
+				</li>	
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul></div>
+			
+		<form name="search" method = "get" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php" onsubmit="return validate();">	
+			<div id = "search"><input type="text" name="searchhere" />
+			<button type="submit"><i class="searchicon">&#8981;</i></button>
+			</div> 
+		</form>
+			<span id = "open" style="font-size:15px;cursor:pointer" onclick="openNav()">My Account</span>
+	<div id="sideBar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<p>Login here to check your profile or Register Now!</p>
+			<div><span id="clickHere" class="account" style="cursor:pointer" onclick="openLog()">Login</span>
+
+	<div id="modal" class="modals">
+
+	<div class="modinside">
+		<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php"
+			onsubmit="return validateAccount();">
+		<div class="accbox" id="ema">
+			Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="emailA" />
+		</div>
+		<div class="accbox" id="pas">
+			Password: <input type="password" name="passA" />
+		</div>
+		<div>
+			<input class="accbox" type="submit" value="Login" />
+		</div>
+			</form>
+	</div>
+	</div>
+			</div>
+			
+	<div><span id="clickHere2" class="account2" style="cursor:pointer" onclick="openLog2()">Register</span>
+		<div id="modal2" class="modals">
+			<div class="modinside">
+				<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account2" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php"
+			onsubmit="return validateAccount2();">
+			
+		<div class="accbox" id="fname">
+			Name&nbsp; <br/><input type="text" name="fname" />
+		</div>
+		
+		<div class="accbox" id="remail">
+			Email <br/><input type="text" name="remail" />
+		</div>
+	
+		<div class="accbox" id="rpass">
+			Password <br/><input type="password" name="rpass" />
+		</div>
+		
+		<div class="accbox" id="passrepeat">
+			Re-enter password <br/><input type="password" name="passrepeat" />
+		</div>
+		
+		<div class="accbox" id="mailing">
+			Do you wish to subscribe to the mailing list: <br/>
+			<input type="radio" name="choiceC" value="Y" id="Yes" />Yes<br/>
+			<input type="radio" name="choiceC" value="N" id="No" />No<br/>
+		</div>
+		
+		<div class="accbox" id="terms">
+			I have understood the terms and conditions<br/>
+			<input type="checkbox" name="agreeTerms" />Agree<br/>
+		</div>
+
+		<div id="subreset">
+			<input class="accbox" type="submit" value="Submit" /> <input class="accbox" type="reset" value="Reset" />
+		</div>
+			</form>
+			</div>
+		</div>
+	</div>
+		<img src="images/logo.png" alt="Logo" style="height:120px; width:120px"/>
+	</div>
+
+
+		<div class="background">
+			<h2>About: HTML &amp; CSS</h2> <!-- main content -->
+				<img id = "rightimg" src="images/css.png" alt="CSSLogo" style="height:150px;width:90px"/>
+				<img id = "leftimg" src="images/html.png" alt="HTMLLogo" style="height:150px;width:98px"/>
+				<img id = "logo" src="images/logo.png" alt="Logo" style="height:200px; width:200px"/> <!-- images on page -->
+		
+			<p>The <a href="https://en.wikipedia.org/wiki/World_Wide_Web"><strong>World Wide Web</strong></a> was created by <span class="hover"><a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee"><em>Tim Berners-Lee</em></a></span> in 1989. Tim Berners-Lee was working at CERN when he came up with the idea of the Web. After, he invented HTML and wrote his first version of it in 1993.</p>
+			
+			<p><a href="https://en.wikipedia.org/wiki/HTML"><strong>HTML</strong></a> otherwise known as Hypertext Markup Language is a markup language and this is the main language for producing webpages. HTML is used to create the base format of a webpage.It contains the content and structural semantics of a page.
+			<br/>Originally HTML was simple and used to handle text-based documents. However as using the web became more popular, HTML had to evolve to keep up with the demands of new features. HTML 2.0 to 3.2(1996) enabled images, forms and structuring of the page. In 1999 HTML 4.01 became the last complete standard version of HTML. It had support for CSS, JavaScript and other multimedia objects.
+			<br/>Eventually <a href="https://en.wikipedia.org/wiki/XHTML"><strong>XHTML</strong></a> came to development in 2000. It was a rewrite of HTML using XML languages. XHTML is very similar to HTML but its rules are more strict. Most webpages are written in either HTML 4.01 or XHTML 1.0.
+			<br/>In more recent times <a href="https://en.wikipedia.org/wiki/HTML5"><strong>HTML5</strong></a> has slowly started to take over HTML 4.01 and XHTML. HTML5 was created in collaboration with W3C and <a href="https://en.wikipedia.org/wiki/WHATWG"><em>WHATWG</em></a>. Using this language would reduce the need for browser plugins, improve the responsiveness of the webpage on different devices and overall improve the semantic organisation. <a href= "https://en.wikipedia.org/wiki/Document_Object_Model"><em>Document Object Models</em></a> (DOM) and APIs are now also part of the specification.
+			</p>
+			
+			<p><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"><strong>CSS</strong></a> or Cascading Style Sheets is used in conjunction with HTML. It is a style sheet language and it creates the layout and presentation style of the HTML document. By using CSS, there is more flexibility and control in the webpage design. It also recduces the need of repeating code throughout multiple webpages. Another useful feature is that you are able to change the formatting for different devices by using &#64;media rules and also be able to add animation and transformation effects.
+			<br/><span class="hover2"><a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie"><em>Hakon Wium Lie</em></a></span> created the first draft of CSS in 1994 and within two years, the first release of CSS Level 1 was made. This release supported many different formatting such as tables, images, colours, etc. Not long after, CSS 2 came out which supported z-indexes and other media types. In 2011 came CSS 3 which is the most current styling sheet.</p> 
+			
+			<p>If you are interested more on the history of the web, check out this brief video below!</p>
+		
+		<div id = "video"> <!-- video object -->
+			<div id="borderyoutube"><object width="420" height="240" 
+				type="application/x-shockwave-flash"
+				data="https://www.youtube.com/v/9hIQjrMHTv4?color2=FBE9EC&amp;version=3">
+				<param name="Sign Language" value="https://www.youtube.com/v/9hIQjrMHTv4?color2=FBE9EC&amp;version=3" />
+				<param name="allowFullScreen" value="true" />
+				<param name="allowScriptAccess" value="always" />
+			</object></div>
+
+			<p><strong>History of the Internet</strong></p></div>
+		</div>
+		
+		<div id = "footer"> <!-- same footer as home page -->
+			<div id = "left"><p>References: <a href="https://blackboard.ncl.ac.uk/">Blackboard</a>, <a href="https://www.istockphoto.com/">iStockphoto</a>, <a href="https://www.w3schools.com/">W3Schools</a>, <a href="https://en.wikipedia.org/wiki/Main_Page"> Wikipedia</a></p></div>
+			<div id = "right"><p>Jane Lee 2018</p></div>
+		</div>
+	</div>
+
+</body></html>

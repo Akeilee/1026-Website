@@ -1,0 +1,410 @@
+/*using css 3*/
+
+html{	/* whole page */
+	background-color:#ffffff;	/* background colour of whole page */
+}
+
+body{	/*body block of page*/
+	top:0; /*start at the top of the page*/
+	color:#000000;
+	font-family:Arial, Helvetica, Concourse; /*font for the whole page with backup font*/
+	font-size:15px;
+	margin: 0 auto;
+	float:none;
+}
+
+.background{ /*the main body*/
+	margin:0 auto; /*centers the body*/
+	padding:20px 20px 60px 20px;
+	min-width:550px;
+	max-width:980px;
+	background-color:#f2efea;
+	border-style:solid;
+	border-color: #939696;
+	border-width:2px;
+	border-bottom-color:transparent; /*top and bottom border is transparent, only sides will have shadow*/
+	border-top-color:transparent;
+	clear:both;
+	box-shadow:0 0 5px 0 #7f7e7e;
+}
+
+
+		/* ********HEADER 1******** */
+
+h1{
+	position:relative;
+	text-align:center;
+	font-size:70px;
+	background-color:#f26c13;
+	color:#ffffff;
+	padding:20px 0 20px 0;
+	margin:50px 0 0 0;
+	clear:both; /*clearing floats so nothing will block the header position*/
+	box-shadow:0 0 10px 0 #000000;
+}
+
+		/* ********NAVIGATION BAR******** */
+#menu{
+	position:absolute; /*absolute so it always shows at top of page*/
+	top:0;
+	height:50px;
+	padding:0;
+	background-color:#565252;
+	color:#ffffff;
+	width:100%; /*so it spans across the page*/
+	margin:0;
+	float:left;
+	overflow:hidden; /*content will not flow out the block*/
+	clear:both;
+	box-shadow:0 0 10px 0 #3d3d3d;
+}
+
+#menu a{
+	text-align:center; /*centering the text*/
+}
+
+#menu ul {
+	display:inline-block;
+	list-style-type:none;
+	margin: 0 auto;
+	padding:0;
+	position:absolute;
+	float:left;
+}
+
+#menu ul li {
+	display:inline;
+}
+
+
+#menu ul li a {
+	display:inline-block; /*displayed to be shown horizontally*/
+	color:#ffffff;
+	text-align:center;
+	padding:16px 16px;
+	margin:0;
+	text-decoration:none;
+	
+}
+
+#menu a:hover{ /*hovering over menu*/
+	background-color:#c66625;
+	color:#ffffff;
+	font-weight:bold;
+ }
+ 
+ #menu ul li ul { /*links within links are hidden in the navigation menu*/
+	display:none;
+}
+ 
+ 
+ @media screen and (max-width:400px){ /*will change menu at different sized window*/
+	
+		#menu{
+		position:absolute;
+		top:0;
+		padding:0;
+		background-color:#565252;
+		color:#ffffff;
+		width:100%;
+		margin:0;
+		float:left;
+		box-shadow:0 0 10px 0 #3d3d3d;
+		}
+		
+			
+		#menu ul{
+			display:inline;
+		}
+
+		#menu ul li a {
+			display:inline;
+			color:#ffffff;
+			padding:0; /*no padding so text will not interfere with each other*/
+			margin:0;
+			text-decoration:none;
+		}
+		
+		#search{ /*hides the search button*/
+			display:none;
+		}
+		
+}
+
+
+.active { /*shows which page you are currently on*/
+	background-color:#b75512;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+#search{ /*search bar and button*/
+	position:absolute;
+	top:2%;
+	right:10%;
+}
+
+#search button{ /*the magnifying glass button*/
+	float: right; 
+	height:25px;
+	width:30px;
+	margin:0;
+	padding:0px 5px 5px 0px;
+	background: #8c8c8c;
+	font-size: 14px;
+	border-top-style:none; /*no borders for 3 edges*/
+	border-right-style:none;
+	border-bottom-style:none;
+	border-left-style:solid;
+	border-left-color:#706f6f;
+	cursor: pointer; /*pointer cursor when over the button*/
+}
+
+#search button:hover { /*background colour changes when hovering*/
+	background: #636363;
+}
+
+#search input[type=text] { /*search bar expands when clicked on*/
+	width:40px;
+	transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#search input[type=text]:focus { /*does not expand over 79% of width*/
+    width: 79%;
+}
+
+
+		/* ********SIDE MENU******** */
+
+#open{ /*My account button*/
+	right:0;
+	top:0;
+	position:absolute;
+	padding:16px 18px;
+	color:#ffffff;
+}
+
+#open:hover { /*hovering over the my account button*/
+	background-color:#c66625;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+#sideBar { /*sidebar after clicking my account*/
+	text-align:center;
+    height: 100%;
+    width: 0;
+    position: fixed; /*fixed so it will scroll with page*/
+    z-index: 5; /*high z-index so it is above everything else*/
+    top: 0;
+    right: 0;
+    background-color: #282828;
+    overflow-x: hidden;
+    transition: 0.5s; /*the effect when it pops out*/
+    padding-top: 60px;
+}
+
+#sideBar a { /*links within the sidebar*/
+    padding: 6px 6px 6px 6px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #d6d4d4;
+    display: block;
+    transition: 0.4s;
+}
+
+#sideBar .account, .account2 {  /*login and register button*/
+    padding: 25px 10px 25px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #d6d4d4;
+    display: block;
+    transition: 0.4s;
+}
+
+#sideBar .account:hover, .account2:hover { /*hovering over login and register*/
+	background-color:#8a8c8e;
+    color: #ffffff;
+}
+
+#sideBar .closebtn { /*the x button to close the sidebar*/
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#sideBar p{ /*font in the sidebar*/
+	text-align:center;
+	padding:16px 16px;
+	color:#ffffff;
+	font-size:18px;
+}
+
+#sideBar img{  /*image of logo in sidebar*/
+	padding:0;
+	margin-top:50px;
+	height:120px;
+	width:120px;
+}
+
+
+		/* ********BODY CONTENT******** */
+
+#intro{  /*intro on main page*/
+	text-align:center;
+	padding:0 20px 0 20px;
+	margin:10px 0 20px 0;
+	font-size:16px;
+}
+
+.image { /*image container*/
+	text-align:center;
+	position:relative;
+	clear:both;
+}
+
+.image img {  /*setting the images*/
+	width:75%;
+	border-style:solid;
+	border-width:2px;
+	border-color:#000000;
+	border-radius: 25px;
+	box-shadow:	0px 0px 20px 0px #000000;
+	margin:20px 0 -20px 0;
+}
+
+.title { /*h2*/
+	position:absolute;
+	top:35%;
+	left:30%;
+	right:30%;
+	z-index:2;
+}
+
+.title a{ /*h2 links*/
+	text-decoration:none;
+	color:#ffffff;
+	font-size:100px;
+	text-shadow: 1px 0 0 #424344, -1px 0 0 #424344, 0 1px 0 #424344, 0 -1px 0 #424344, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.align { /*text inside*/
+	position:absolute;
+	top:35%;
+	left:30%;
+	right:30%;
+	color:#ffffff;
+	font-size:30px;
+	z-index:2;
+	visibility:hidden;  /*hidden by default*/
+	text-shadow: 1px 0 0 #4c4b4b, -1px 0 0 #4c4b4b, 0 1px 0 #4c4b4b, 0 -1px 0 #4c4b4b, 1px 1px #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;
+}
+
+.image:hover .align{  /*text becomes visible*/
+	visibility:visible;
+}
+
+.image:hover .title{  /*word disapperars*/
+	visibility:hidden;
+}
+
+.image:hover img{  /*opacity changes when hover over*/
+	opacity:0.2;
+}
+
+
+		/* ********FOOTER******** */
+
+#footer{ /*footer format*/
+	background-color:#f26c13;
+	height:49px;
+	color:#ffffff;
+	margin:0px;
+	padding:0px;
+	box-shadow:0 0 10px 0 #3d3d3d;
+	text-decoration:none;
+}
+
+#footer a:link{ /*footer links*/
+	text-decoration:none;
+	color:#ffffff;
+}
+
+#footer a:visited{ /*footer links visited*/
+	text-decoration:none;
+	color:#ffffff;
+}
+
+#footer a:hover{ /*footer links hovered*/
+	text-decoration:underline;
+}
+
+#footer #left{ /*text to be displayed left*/
+	float:left;
+	display:block;
+	padding:0 0 0 15px;
+	margin:0;
+}
+
+#footer #right{ /*text to be displayed right*/
+	display:block;
+	float:right;	
+	padding:0 15px 0 0;
+	margin:0;
+}
+
+
+		/* ********MODALS******** */
+
+.modals {  /*modals for when login and register*/
+    display: none;  /*modal is not shown by default*/
+    position: fixed;
+    z-index: 1; 
+    padding:70px 0 0 0; 
+	left:0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5);  /*background has opacity when modal is shown*/
+}
+
+.modinside {  /*modal content*/
+    background-color: #f26c13;
+    margin: auto;
+    padding: 25px 10px 15px 15px;
+    border: 1px solid #888;
+    width: 35%;
+}
+
+.exit {  /*the x button to close the modal*/
+	position:relative;
+    color: #000000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.exit:hover, .exit:focus{  /*hovering over the x button*/
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.accbox{  /*used for the login modal*/
+	font-size:16px;
+	text-align:left;
+	margin:20px;
+	padding:5px;
+}
+
+.accbox #ema{  /*login modal positioning*/
+	margin-top:50px;
+}
+
+#ema, #pas, #fname, #remail, #rpass, #passrepeat, #mailing, #terms{  /*specific modal font changes*/
+	font-weight:bold;
+}

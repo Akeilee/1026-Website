@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- using transitional XHTML 1.0 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>101 HTML and CSS</title>
+	<link rel="stylesheet" type="text/css" href="css.css" /> <!-- referencing css style sheet -->
+	<script type="text/javascript" src="jscript.js"></script> <!-- referencing javascript sheet -->
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body>
+
+	<h1>101 HTML &amp; CSS</h1>
+
+		<div id = "menu"> <!-- menu on top of page -->
+			<ul>
+				<li><a class="active" href="index.html">Home</a></li> <!-- active class on home page -->
+				<li><a href="about.html">About</a></li>
+				<li><a  href="lessons.html">Lessons</a>
+					<ul style="list-style-type:circle">
+						<li><a href="HTML.html">HTML</a></li>
+						<li><a href="CSS.html">CSS</a></li>
+					</ul>
+				</li>	
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul></div>
+		<!-- search button -->	
+		<form name="search" method = "get" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php" onsubmit="return validate();">	
+			<div id = "search"><input type="text" name="searchhere" />
+			<button type="submit"><i class="searchicon">&#8981;</i></button>
+			</div> 
+		</form>
+			<span id = "open" style="font-size:15px;cursor:pointer" onclick="openNav()">My Account</span> <!-- my account button -->
+	<div id="sideBar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!-- closing the sidebar -->
+			<p>Login here to check your profile or Register Now!</p> <!-- inside the nav bar -->
+			<div><span id="clickHere" class="account" style="cursor:pointer" onclick="openLog()">Login</span>
+
+	<div id="modal" class="modals"> <!-- modal for login (reference: https://www.w3schools.com/howto/howto_css_modals.asp) -->
+
+	<div class="modinside">
+		<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php"
+			onsubmit="return validateAccount();"> <!-- uses the javascript -->
+		<div class="accbox" id="ema">
+			Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="emailA" />
+		</div>
+		<div class="accbox" id="pas">
+			Password: <input type="password" name="passA" /> <!-- forms for email and password -->
+		</div>
+		<div>
+			<input class="accbox" type="submit" value="Login" />
+		</div>
+			</form>
+	</div>
+	</div>
+			</div>
+			
+	<div><span id="clickHere2" class="account2" style="cursor:pointer" onclick="openLog2()">Register</span>
+		<div id="modal2" class="modals"> <!-- modal for register -->
+			<div class="modinside">
+				<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account2" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php" 
+			onsubmit="return validateAccount2();"> <!-- using post so data is secure -->
+		<!-- form for registration -->	
+		<div class="accbox" id="fname">
+			Name&nbsp; <br/><input type="text" name="fname" />
+		</div>
+		
+		<div class="accbox" id="remail">
+			Email <br/><input type="text" name="remail" />
+		</div>
+	
+		<div class="accbox" id="rpass">
+			Password <br/><input type="password" name="rpass" />
+		</div>
+		
+		<div class="accbox" id="passrepeat">
+			Re-enter password <br/><input type="password" name="passrepeat" />
+		</div>
+		
+		<div class="accbox" id="mailing">
+			Do you wish to subscribe to the mailing list: <br/>
+			<input type="radio" name="choiceC" value="Y" id="Yes" />Yes<br/>
+			<input type="radio" name="choiceC" value="N" id="No" />No<br/>
+		</div>
+		
+		<div class="accbox" id="terms">
+			I have understood the terms and conditions<br/>
+			<input type="checkbox" name="agreeTerms" />Agree<br/>
+		</div>
+
+		<div id="subreset"> <!-- reset/ submit the form -->
+			<input class="accbox" type="submit" value="Submit" /> <input class="accbox" type="reset" value="Reset" />
+		</div>
+			</form>
+			</div>
+		</div>
+	</div> <!-- logo of website -->
+		<img src="images/logo.png" alt="Logo" style="height:120px; width:120px"/>
+	</div>
+
+	
+		<div class="background"> <!-- main content -->
+		
+			<p id = "intro">This website is a brief tutorial on how to use HTML and CSS. These short lessons will allow you to be able to make your own webpage. By registering, you are able to keep track of which lessons you have done and the results of the quizzes. There will also be more lessons updated in the future. Register now if you wish to receive updates of these new lessons!</p>
+		
+				<div class="image"><h2 class="title"><a href="history.html">HISTORY</a></h2> <!-- images will fade and text will show -->
+					<a href="about.html"><img src="images/historypicture.jpg" alt="aboutpicture"/></a>
+					<p class="align">Learn about the history of HTML and CSS!</p></div>
+				<div class="image"><h2 class="title"><a href="htmllesson.html">HTML</a></h2>
+					<a href="HTML.html"><img src="images/htmlpicture.jpg" alt="htmlpicture"/></a>
+					<p class="align">Make your own website using these short HTML lessons!</p></div>
+				<div class="image"><h2 class="title"><a href="csslesson.html">CSS</a></h2>
+					<a href="css.html"><img src="images/csspicture.jpg" alt="csspicture"/></a>
+					<p class="align">Make your website better by learning on how to use CSS!</p></div>
+				</div>
+			
+		<div id = "footer"> <!-- footer of webpage -->
+			<div id = "left"><p>References: <a href="https://blackboard.ncl.ac.uk/">Blackboard</a>, <a href="https://www.istockphoto.com/">iStockphoto</a>, <a href="https://www.w3schools.com/">W3Schools</a>, <a href="https://en.wikipedia.org/wiki/Main_Page"> Wikipedia</a></p></div>
+			<div id = "right"><p>Jane Lee 2018</p></div> <!-- right side of footer -->
+		</div>
+
+</body></html>

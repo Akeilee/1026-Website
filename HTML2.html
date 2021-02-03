@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>HTMl: Lesson 2</title>
+	<link rel="stylesheet" type="text/css" href="cssOther.css" />
+	<script type="text/javascript" src="jscript.js"></script>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+</head>
+<body><div>
+
+	<h1><a href="index.html">Home</a> &#62; <a href="lessons.html">Lessons</a> &#62; HTML: Lesson 2</h1>
+
+
+		<div id = "menu"> <!-- same menu as home page -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a class="active" href="lessons.html">Lessons</a>
+					<ul style="list-style-type:circle">
+						<li><a href="HTML.html">HTML</a></li>
+						<li><a href="CSS.html">CSS</a></li>
+					</ul>
+				</li>	
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul></div>
+			
+		<form name="search" method = "get" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php" onsubmit="return validate();">	
+			<div id = "search"><input type="text" name="searchhere" />
+			<button type="submit"><i class="searchicon">&#8981;</i></button>
+			</div> 
+		</form>
+			<span id = "open" style="font-size:15px;cursor:pointer" onclick="openNav()">My Account</span>
+	<div id="sideBar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<p>Login here to check your profile or Register Now!</p>
+			<div><span id="clickHere" class="account" style="cursor:pointer" onclick="openLog()">Login</span>
+
+	<div id="modal" class="modals">
+
+	<div class="modinside">
+		<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php"
+			onsubmit="return validateAccount();">
+		<div class="accbox" id="ema">
+			Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="emailA" />
+		</div>
+		<div class="accbox" id="pas">
+			Password: <input type="password" name="passA" />
+		</div>
+		<div>
+			<input class="accbox" type="submit" value="Login" />
+		</div>
+			</form>
+	</div>
+	</div>
+			</div>
+			
+	<div><span id="clickHere2" class="account2" style="cursor:pointer" onclick="openLog2()">Register</span>
+		<div id="modal2" class="modals">
+			<div class="modinside">
+				<span class="exit" onclick="closeLog()" >&times;</span>
+			<form name="account2" method="post" action="https://internal.cs.ncl.ac.uk/modules/2017-18/csc1026/scripts/formscript.php"
+			onsubmit="return validateAccount2();">
+			
+		<div class="accbox" id="fname">
+			Name&nbsp; <br/><input type="text" name="fname" />
+		</div>
+		
+		<div class="accbox" id="remail">
+			Email <br/><input type="text" name="remail" />
+		</div>
+	
+		<div class="accbox" id="rpass">
+			Password <br/><input type="password" name="rpass" />
+		</div>
+		
+		<div class="accbox" id="passrepeat">
+			Re-enter password <br/><input type="password" name="passrepeat" />
+		</div>
+		
+		<div class="accbox" id="mailing">
+			Do you wish to subscribe to the mailing list: <br/>
+			<input type="radio" name="choiceC" value="Y" id="Yes" />Yes<br/>
+			<input type="radio" name="choiceC" value="N" id="No" />No<br/>
+		</div>
+		
+		<div class="accbox" id="terms">
+			I have understood the terms and conditions<br/>
+			<input type="checkbox" name="agreeTerms" />Agree<br/>
+		</div>
+
+		<div id="subreset">
+			<input class="accbox" type="submit" value="Submit" /> <input class="accbox" type="reset" value="Reset" />
+		</div>
+			</form>
+			</div>
+		</div>
+	</div>
+		<img src="images/logo.png" alt="Logo" style="height:120px; width:120px"/>
+	</div>
+
+		
+		<div class="background">
+			<h2 id = "otherh2">HTML : 2 Tags</h2> <!-- main content -->
+		
+			<p><em>Please wait patiently! Content to be released shortly!</em></p>
+				<div class="gif"><img src="images/dogwork.gif" alt="doggif" style="height:150px; width:250px"/>
+			<p>gif from this <a href="https://giphy.com/gifs/dogs-look-ridiculous-SwImQhtiNA7io">link</a></p></div>
+	
+			<p id="back"><a href="HTML.html">Back</a></p>
+		</div>
+		
+			<div id = "footer"> <!-- same footer as home page -->
+				<div id = "left"><p>References: <a href="https://blackboard.ncl.ac.uk/">Blackboard</a>, <a href="https://www.istockphoto.com/">iStockphoto</a>, <a href="https://www.w3schools.com/">W3Schools</a>, <a href="https://en.wikipedia.org/wiki/Main_Page"> Wikipedia</a></p></div>
+			<div id = "right"><p>Jane Lee 2018</p></div>
+		</div>
+	</div>
+
+</body></html>
